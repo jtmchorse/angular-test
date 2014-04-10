@@ -8,7 +8,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
   when('/appGallery', {
     templateUrl: 'partials/main.html',
     controller: 'ListController'
-  }).when('/detail/:itemId', {
+  }).when('/appGallery/detail/:itemId', {
     templateUrl: 'partials/detail.html',
     controller: 'DetailsController'
   }).

@@ -19,18 +19,46 @@
   font-style: normal;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 16, ../sass/main.scss */
+.ng-enter,
+.ng-leave {
+  -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -ms-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -o-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  position: relative;
+  display: block;
+}
+
+/* line 27, ../sass/main.scss */
+.ng-enter.ng-enter-active,
+.ng-leave {
+  opacity: 1;
+  top: 0;
+  height: 30px;
+}
+
+/* line 34, ../sass/main.scss */
+.ng-leave.ng-leave-active,
+.ng-enter {
+  opacity: 0;
+  top: -50px;
+  height: 0px;
+}
+
+/* line 77, ../sass/main.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 17, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 #AppGalleryContainer {
   height: 1210px;
   background: #fff;
 }
 
-/* line 27, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 #GalleryHero {
   height: 290px;
   width: 100%;
@@ -38,7 +66,7 @@
   position: relative;
   background: url(/img/AppGallery_Hero.jpg) no-repeat 0 0;
 }
-/* line 33, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 #GalleryHero h1, #GalleryHero p {
   color: #FFF;
   padding-left: 50px;
@@ -47,7 +75,7 @@
   display: block;
   font: normal 53px/1 "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 41, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 #GalleryHero p {
   line-height: 30px;
   padding-top: 0;
@@ -55,65 +83,65 @@
   font: normal 21px/1 "proxima_nova_light", Helvetica, Arial, sans-serif !important;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 .btn {
   position: absolute;
   display: block;
 }
-/* line 52, ../sass/main.scss */
+/* line 116, ../sass/main.scss */
 .btn.icon {
   top: 250px;
   right: 46px;
-  height: 88px;
+  height: 68px;
   width: 304px;
   color: #fff;
   background: transparent url("/img/btn-icon-bg.png") -2px -3px no-repeat;
   text-align: left;
 }
-/* line 60, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 .btn.icon:hover {
   background-position: -2px -96px;
 }
-/* line 63, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 .btn.icon a {
   text-decoration: none;
   display: block;
   margin-left: 60px;
-  margin-top: 15px;
+  margin-top: 5px;
   color: white !important;
 }
-/* line 69, ../sass/main.scss */
+/* line 133, ../sass/main.scss */
 .btn.icon a span {
   display: block;
 }
-/* line 71, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .btn.icon a span.emphasis {
   margin-bottom: 3px;
   font-size: 21px;
 }
-/* line 75, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 .btn.icon a span.underline {
   text-decoration: underline;
   display: inline-block;
 }
-/* line 80, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .btn.icon a:hover {
   color: #fff;
 }
 
-/* line 86, ../sass/main.scss */
+/* line 150, ../sass/main.scss */
 .appList {
   width: 901px;
   height: 100%;
   margin: 0 auto;
 }
-/* line 90, ../sass/main.scss */
+/* line 154, ../sass/main.scss */
 .appList .title {
   font-size: 25px;
   margin-bottom: 20px;
   font-family: "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 95, ../sass/main.scss */
+/* line 159, ../sass/main.scss */
 .appList.featured {
   background: #dddddd;
   -webkit-border-radius: 4px;
@@ -128,7 +156,7 @@
   margin-top: 57px;
   margin-bottom: 35px;
 }
-/* line 104, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .appList.featured .title {
   background: #dddddd;
   position: absolute;
@@ -145,7 +173,7 @@
   width: 201px;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 181, ../sass/main.scss */
 .app {
   width: 167px;
   height: 166px;
@@ -160,7 +188,7 @@
   margin-bottom: 7px;
   font: normal 14px/1.5 "proxima_nova_reg", Helvetica, Arial, sans-serif !important;
 }
-/* line 130, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 .app.embeded:after {
   content: " ";
   background-image: url(/img/icon_embeded.png);
@@ -172,24 +200,24 @@
   top: 1px;
   right: -1px;
 }
-/* line 142, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .app.last, .app:nth-of-type(4n+4) {
   margin-right: 0;
 }
-/* line 145, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .app img {
   max-height: 53px;
   margin: 0 auto;
   display: block;
 }
-/* line 150, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 .app h3 {
   margin-top: 27px;
   margin-bottom: 2px;
   color: #fff;
   font: normal 14px/1.5 "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 156, ../sass/main.scss */
+/* line 220, ../sass/main.scss */
 .app p {
   margin-top: 0px;
   line-height: 17px;
@@ -197,13 +225,13 @@
   color: #fff;
   font: normal 13px/1 "proxima_nova_light", Helvetica, Arial, sans-serif !important;
 }
-/* line 164, ../sass/main.scss */
+/* line 228, ../sass/main.scss */
 .app:active, .app:hover {
   background-position: 0px -225px;
   color: #fff;
   text-decoration: none;
 }
-/* line 169, ../sass/main.scss */
+/* line 233, ../sass/main.scss */
 .app.dev {
   background: transparent url(/img/app-cta.png) 0 0 no-repeat;
 }
@@ -219,26 +247,28 @@
   background-color: #fff;
 }
 
-/* line 8, ../sass/_detail.scss */
-.node-type-page .content #GalleryHero.app-detail {
+/* line 31, ../sass/_detail.scss */
+#GalleryHero.app-detail {
   height: 40px;
   width: 100%;
   margin-bottom: 26px;
   position: relative;
   background: url(/img/AppGallery_Hero.jpg) no-repeat 0 0;
 }
-/* line 15, ../sass/_detail.scss */
-.node-type-page .content a {
+
+/* line 38, ../sass/_detail.scss */
+a {
   text-decoration: none;
   color: #6cac3f !important;
   font-family: "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 19, ../sass/_detail.scss */
-.node-type-page .content a:hover {
+/* line 42, ../sass/_detail.scss */
+a:hover {
   text-decoration: underline;
 }
-/* line 26, ../sass/_detail.scss */
-.node-type-page .content a.back.cta {
+
+/* line 49, ../sass/_detail.scss */
+a.back.cta {
   color: white !important;
   text-decoration: none;
   margin: 13px 0 0 53px;
@@ -246,14 +276,16 @@
   background: url(/img/icon-back-carat.png) no-repeat 0px 0px;
   float: left;
 }
-/* line 35, ../sass/_detail.scss */
-.node-type-page .content #LeftCol {
+
+/* line 58, ../sass/_detail.scss */
+#LeftCol {
   width: 22%;
   margin-left: 5%;
   float: left;
 }
-/* line 40, ../sass/_detail.scss */
-.node-type-page .content .tile {
+
+/* line 63, ../sass/_detail.scss */
+.tile {
   height: 94px;
   width: 210px;
   background: #3C3E41;
@@ -265,10 +297,10 @@
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 47, ../sass/_detail.scss */
-.node-type-page .content .tile.embeded:after {
+/* line 70, ../sass/_detail.scss */
+.tile.embeded:after {
   content: " ";
-  background-image: url(/img/icon_embeded_0.png);
+  background-image: url(/img/icon_embeded.png);
   background-repeat: no-repeat;
   height: 72px;
   width: 72px;
@@ -277,15 +309,16 @@
   top: -1px;
   right: -1px;
 }
-/* line 58, ../sass/_detail.scss */
-.node-type-page .content .tile img {
+/* line 81, ../sass/_detail.scss */
+.tile img {
   max-height: 53px;
   margin: 0 auto;
   display: block;
   padding-top: 15px;
 }
-/* line 65, ../sass/_detail.scss */
-.node-type-page .content .well {
+
+/* line 88, ../sass/_detail.scss */
+.well {
   width: 181px;
   padding: 23px 0 23px 28px;
   background-color: #EEEEEE;
@@ -295,94 +328,95 @@
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 72, ../sass/_detail.scss */
-.node-type-page .content .well table {
+/* line 95, ../sass/_detail.scss */
+.well table {
   width: 100%;
   font-size: 13px;
 }
-/* line 79, ../sass/_detail.scss */
-.node-type-page .content .well table tbody tr td {
+/* line 102, ../sass/_detail.scss */
+.well table tbody tr td {
   height: auto;
   vertical-align: top;
   padding-bottom: 5px;
 }
-/* line 83, ../sass/_detail.scss */
-.node-type-page .content .well table tbody tr td.bold {
+/* line 106, ../sass/_detail.scss */
+.well table tbody tr td.bold {
   text-align: right;
   width: 56px;
   padding-right: 5px;
 }
-/* line 88, ../sass/_detail.scss */
-.node-type-page .content .well table tbody tr td.green {
+/* line 111, ../sass/_detail.scss */
+.well table tbody tr td.green {
   color: #7FB92A;
   margin-left: 5px;
 }
-/* line 97, ../sass/_detail.scss */
-.node-type-page .content #RightCol {
+
+/* line 120, ../sass/_detail.scss */
+#RightCol {
   width: 64%;
   margin-left: 4%;
   display: inline-block;
 }
-/* line 101, ../sass/_detail.scss */
-.node-type-page .content #RightCol h1, .node-type-page .content #RightCol #GalleryHero p, #GalleryHero .node-type-page .content #RightCol p {
+/* line 124, ../sass/_detail.scss */
+#RightCol h1, #RightCol #GalleryHero p, #GalleryHero #RightCol p {
   margin: 45px 0 0 0;
   font: normal 37px/1.5 "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 105, ../sass/_detail.scss */
-.node-type-page .content #RightCol hr {
+/* line 128, ../sass/_detail.scss */
+#RightCol hr {
   color: #EEEEEE;
   margin: 17px 0;
 }
-/* line 109, ../sass/_detail.scss */
-.node-type-page .content #RightCol section {
+/* line 132, ../sass/_detail.scss */
+#RightCol section {
   margin-bottom: 36px;
 }
-/* line 111, ../sass/_detail.scss */
-.node-type-page .content #RightCol section h3 {
+/* line 134, ../sass/_detail.scss */
+#RightCol section h3 {
   margin-bottom: 10px;
   font: normal 25px/1 "proxima_nova_light", Helvetica, Arial, sans-serif !important;
   width: 567px;
 }
-/* line 116, ../sass/_detail.scss */
-.node-type-page .content #RightCol section p {
+/* line 139, ../sass/_detail.scss */
+#RightCol section p {
   margin: 0;
   font: normal 14px/1.5 "proxima_nova_reg", Helvetica, Arial, sans-serif !important;
   width: 567px;
 }
-/* line 121, ../sass/_detail.scss */
-.node-type-page .content #RightCol section ul, .node-type-page .content #RightCol section ol {
+/* line 144, ../sass/_detail.scss */
+#RightCol section ul, #RightCol section ol {
   padding-left: 16px;
   margin: 0;
 }
-/* line 124, ../sass/_detail.scss */
-.node-type-page .content #RightCol section ul li, .node-type-page .content #RightCol section ol li {
+/* line 147, ../sass/_detail.scss */
+#RightCol section ul li, #RightCol section ol li {
   list-style-type: square !important;
   width: 567px;
   margin-bottom: 9px;
   font: normal 14px/1.5 "proxima_nova_reg", Helvetica, Arial, sans-serif !important;
 }
-/* line 129, ../sass/_detail.scss */
-.node-type-page .content #RightCol section ul li .bold, .node-type-page .content #RightCol section ol li .bold {
+/* line 152, ../sass/_detail.scss */
+#RightCol section ul li .bold, #RightCol section ol li .bold {
   color: #000;
   font: normal 14px/1.5 "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
 }
-/* line 133, ../sass/_detail.scss */
-.node-type-page .content #RightCol section ul li .copy, .node-type-page .content #RightCol section ol li .copy {
+/* line 156, ../sass/_detail.scss */
+#RightCol section ul li .copy, #RightCol section ol li .copy {
   color: #5A5F66;
   font: normal 14px/1.5 "proxima_nova_reg", Helvetica, Arial, sans-serif !important;
 }
-/* line 141, ../sass/_detail.scss */
-.node-type-page .content #RightCol section ol li {
+/* line 164, ../sass/_detail.scss */
+#RightCol section ol li {
   list-style-type: inherit !important;
   padding-left: 5px;
   font: normal 14px/1.5 "proxima_nova_reg", Helvetica, Arial, sans-serif !important;
 }
-/* line 148, ../sass/_detail.scss */
-.node-type-page .content #RightCol img {
+/* line 171, ../sass/_detail.scss */
+#RightCol img {
   margin-bottom: 20px;
 }
-/* line 151, ../sass/_detail.scss */
-.node-type-page .content #RightCol .intro {
+/* line 174, ../sass/_detail.scss */
+#RightCol .intro {
   margin: 0 0 23px 0;
   font: normal 20px/1.5 "proxima_nova_light", Helvetica, Arial, sans-serif !important;
 }

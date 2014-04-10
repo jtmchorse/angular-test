@@ -1,4 +1,4 @@
-<section>
+<section ng-model="apps">
 		<div id="GalleryHero" class="app-detail" >
 			<a href="/index.html" class="back cta">
 				Back to Gallery
@@ -6,37 +6,43 @@
 		</div>
 		<div id="LeftCol" >
 			<div class="tile embeded">
-				<img src="https://www.smartsheet.com/files/haymaker/logo_googleDrive.png" alt="">
+				<img ng-src="img/logos/logo_{{item.shortname}}.png" alt="Logo for {{item.name}}">
 			</div>
-			<div class="well" ng-model="apps">
+			<div class="well" >
 			<table>
 				<tbody>
 					<tr>
 						<td class="bold">Built by:</td>
 						<td class="green">
-							<a href="#">{{item.name}}</a>
+							<a href="{{item.builderURL}}">{{item.builtby}}</a>
 						</td>
 					</tr>
 					<tr>
 						<td class="bold">Support:</td>
-						<td class="green"><a href="#">Help site</a></td>
+						<td class="green">
+							<a href="{{item.supportURL}}">Help site</a>
+						</td>
 					</tr>
 					<tr>
 						<td class="bold">Docs:</td>
-						<td class="green"><a href="#">Documentation</a></td>
+						<td class="green">
+							<a href="{{item.docsURL}}">Documentation</a>
+						</td>
 					</tr>
 					<tr>
 						<td class="bold">Demo:</td>
-						<td class="green"><a href="#">App Url</a></td>
+						<td class="green">
+							<a href="{{item.demoURL}}">App Url</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
 			</div>
 		</div>
 		<div id="RightCol">
-			<h1>Google Drive</h1>
+			<h1>{{item.name}}</h1>
 			<hr>
-			<p class="intro">Access your files from Google Drive via a Google Picker directly in Smartsheet gives you instant access to all of your files.</p>
+			<p class="intro">{{item.detailblurb}}</p>
 
 			<img src="https://www.smartsheet.com/files/haymaker/detail-screen-googleDrive.jpg" alt="">
 

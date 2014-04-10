@@ -2,9 +2,32 @@
 // $localurl:"/img/";
 // $httpurl:$localurl;
 
-.node-type-page .content {
+//.node-type-page .content {
     //Hero section
     //Reusing same hero image from app list page, since it's already loaded..
+    // .main.ng-enter, .main.ng-leave {
+    //       //transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .45s;
+    //        transition: padding 1s;
+
+    //  }
+    // .main.ng-enter.ng-enter-active {
+    //  padding-left: 1300px;
+    // }
+
+    // .main.ng-enter {
+    //  left: 0;
+    // }
+
+    // .main.ng-leave.ng-leave-active {
+    //  position: absolute;
+    //  left: -1700px;
+    //  }
+
+    // .main.ng-leave {
+    //  right: 0;
+    //  }
+
+
     #GalleryHero.app-detail {
         height: 40px;
         width: 100%;
@@ -46,7 +69,7 @@
         @include border-radius(4px);
         &.embeded:after {
             content: " ";
-            background-image: url(#{$httpurl}icon_embeded_0.png);
+            background-image: url(#{$httpurl}icon_embeded.png);
             background-repeat: no-repeat;
             height: 72px;
             width: 72px;
@@ -153,4 +176,4 @@
             @include super-font(20px, 1.5, light);
         }
     }
-}
+//}

@@ -1,4 +1,4 @@
-var appController = angular.module('appController', []);
+var appController = angular.module('appController', ['ngAnimate']);
 
 appController.controller('ListController',  function($scope, $http) {
   $http.get('js/data.json').success(function(data) {

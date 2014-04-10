@@ -1,14 +1,26 @@
+<div id="AppGalleryContainer" ng-animate="'animate'">
+	<div id="GalleryHero">
+	<h1>Apps & Integrations</h1>
+	<p>Get even more productive - Smartsheet works with some of the most popular apps you already use.</p>
+	<div class="btn icon">
+		<a href="#" class="">
+			<span class="emphasis bold">Are you a developer?</span>
+			Get your app <span class="underline">here!</span>
+		</a>
+	</div>
+</div>		
+
 <section>
 	<div class="appList"  >
 		<p class="title">All Apps:</p>
-		<a class="app" ng-class="{'embeded': item.embeded, last: !(($index+1)%4) && !$first}" href="#/detail/{{item.shortname}}"  ng-repeat="item in apps">
+		<a class="app" ng-class="{'embeded': item.embeded, last: !(($index+1)%4) && !$first}" href="#/appGallery/detail/{{item.shortname}}"  ng-repeat="item in apps">
 			<img ng-src="img/logos/logo_{{item.shortname}}.png" alt="">
 			<h3>{{item.name}}</h3>
 			<p>{{item.shortdescription}}</p>
 			
 		</a>
 		<a class="app dev last" href="#/detail/{{apps.indexOf(item)}}">
-			<img src="https://www.smartsheet.com/files/haymaker/logo_devCTA.png" alt="">
+			<img src="img/logos/logo_devCTA.png" alt="">
 			<h3>Get Your App Here</h3>
 			<p>Get your app out to the smartest people in the world - Smartsheeters!</p>
 			<p class="underline">Developers click here</p>
