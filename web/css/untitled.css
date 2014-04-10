@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* -- Font Face -- */
+/* Light */
+@font-face {
+  font-family: 'proxima_nova_light';
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.eot");
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.svg#proxima_novalight") format("svg");
+  font-style: normal;
+}
+
+/* Normal/Regular */
+@font-face {
+  font-family: 'proxima_nova_reg';
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.eot");
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.svg#proxima_nova_rgregular") format("svg");
+  font-style: normal;
+}
+
+/* Semi Bold */
+@font-face {
+  font-family: 'proxima_nova_sbold';
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.eot");
+  src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.svg#proxima_novasemibold") format("svg");
+  font-style: normal;
+}
+
+/* -- End Font Face -- */
+/* line 42, ../sass/untitled.scss */
+#wrapper {
+  margin: 0 auto;
+  width: 1000px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+}
+/* line 49, ../sass/untitled.scss */
+#wrapper #header {
+  height: 80px;
+  background: #5890b1;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #5890b1 0%, #3d7197 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5890b1), color-stop(100%, #3d7197));
+  background: -webkit-linear-gradient(top, #5890b1 0%, #3d7197 100%);
+  background: -o-linear-gradient(top, #5890b1 0%, #3d7197 100%);
+  background: -ms-linear-gradient(top, #5890b1 0%, #3d7197 100%);
+  background: linear-gradient(to bottom, #5890b1 0%, #3d7197 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5890b1', endColorstr='#3d7197',GradientType=0 );
+  margin: 0px 0px 0px 0px;
+}
+
+/* line 63, ../sass/untitled.scss */
+.bold {
+  font-family: 'proxima_nova_sbold', Helvetica, Arial, sans-serif;
+}
+
+/* line 66, ../sass/untitled.scss */
+.btn {
+  text-decoration: none;
+  border-radius: 3px;
+  width: auto;
+  padding: 10px 30px;
+  font: 16px/1 'proxima_nova_sbold', helvetica, arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+/* line 77, ../sass/untitled.scss */
+.btn a {
+  color: #fff !important;
+}

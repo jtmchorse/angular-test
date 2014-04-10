@@ -1,0 +1,156 @@
+//App Detail Pages
+// $localurl:"/img/";
+// $httpurl:$localurl;
+
+.node-type-page .content {
+    //Hero section
+    //Reusing same hero image from app list page, since it's already loaded..
+    #GalleryHero.app-detail {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 26px;
+        position: relative;
+        background: url(#{$httpurl}AppGallery_Hero.jpg) no-repeat 0 0;
+    }
+    a {
+        text-decoration: none;
+        color: #6cac3f !important;
+        font-family: "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    //carat styling
+    //keeping it global in case it is needed outside of the hero section ever
+    a.back {
+        &.cta {
+            color: white !important;
+            text-decoration: none;
+            margin: 13px 0 0 53px;
+            padding-left: 15px;
+            background: url(#{$httpurl}icon-back-carat.png) no-repeat 0px 0px;
+            float: left;
+        }
+    }
+    #LeftCol {
+        width: 22%;
+        margin-left: 5%;
+        float: left;
+    }
+    .tile {
+        height: 94px;
+        width: 210px;
+        background: #3C3E41;
+        position: relative;
+        margin: 20px 0;
+        @include border-radius(4px);
+        &.embeded:after {
+            content: " ";
+            background-image: url(#{$httpurl}icon_embeded_0.png);
+            background-repeat: no-repeat;
+            height: 72px;
+            width: 72px;
+            display: block;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+        }
+        img {
+            max-height: 53px;
+            margin: 0 auto;
+            display: block;
+            padding-top: 15px;
+        }
+    }
+    .well {
+        //Pullling this out for now due to extendable height of containers
+        //height: 140px;
+        width: 181px;
+        padding: 23px 0 23px 28px;
+        background-color: #EEEEEE;
+        @include border-radius(4px);
+        table {
+            width: 100%;
+            font: {
+                size: 13px;
+            };
+            tbody {
+                tr {
+                    td {
+                        height: auto;
+                        vertical-align: top;
+                        padding-bottom: 5px;
+                        &.bold {
+                            text-align: right;
+                            width: 56px;
+                            padding-right: 5px;
+                        }
+                        &.green {
+                            color: #7FB92A;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #RightCol {
+        width: 64%;
+        margin-left: 4%;
+        display: inline-block;
+        h1 {
+            margin: 45px 0 0 0;
+            @include super-font(37px, 1.5, sbold);
+        }
+        hr {
+            color: #EEEEEE;
+            margin: 17px 0;
+        }
+        section {
+            margin-bottom: 36px;
+            h3 {
+                margin-bottom: 10px;
+                @include super-font(25px, 1, light);
+                width: 567px;
+            }
+            p {
+                margin: 0;
+                @include super-font(14px, 1.5, reg);
+                width: 567px;
+            }
+            ul {
+                padding-left: 16px;
+                margin: 0;
+                li {
+                    list-style-type: square !important;
+                    width: 567px;
+                    margin-bottom: 9px;
+                    @include super-font(14px, 1.5, reg);
+                    .bold {
+                        color: #000;
+                        @include super-font(14px, 1.5, sbold);
+                    }
+                    .copy {
+                        color: #5A5F66;
+                        @include super-font(14px, 1.5, reg);
+                    }
+                }
+            }
+            ol {
+                @extend ul;
+                li {
+                    list-style-type: inherit !important;
+                    padding-left: 5px;
+                    @include super-font(14px, 1.5, reg);
+                }
+            }
+        }
+        img {
+            margin-bottom: 20px;
+        }
+        .intro {
+            margin: 0 0 23px 0;
+            @include super-font(20px, 1.5, light);
+        }
+    }
+}

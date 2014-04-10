@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="end" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>App Gallery</title>
+	<link rel="stylesheet" href="css/untitled.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src='lib/angular/angular.min.js'></script>
+	<script src='lib/angular/angular-route.js'></script>
+
+	<!--<script src='lib/angular/angular-animate.js'></script>-->
+	
+	<script src='js/app.js'></script>
+	<script src='js/controller.js'></script>
+</head>
+<body>
+	<section id="wrapper">
+		<div id="header"></div>
+
+
+
+
+<!-- For production Copy from here -->
+		<div id="AppGalleryContainer" >
+			<!--<div id="GalleryHero">
+				<h1>Apps & Integrations</h1>
+				<p>Get even more productive - Smartsheet works with some of the most popular apps you already use.</p>
+				<div class="btn icon">
+					<a href="#" class="">
+						<span class="emphasis bold">Are you a developer?</span>
+						Get your app <span class="underline">here!</span>
+					</a>
+				</div>
+			</div>-->		
+			<div class="main" ng-view></div>
+	
+		</div>
+		
+<!-- To here -->
+	</section>
+	
+</body>
+</html>

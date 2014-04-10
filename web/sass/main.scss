@@ -1,0 +1,180 @@
+@import "compass/css3/border-radius";
+@import "mixins";
+@import "fonts";
+
+$httpurl: "https://www.smartsheet.com/files/haymaker/";
+$localurl:"/img/";
+$httpurl:$localurl;
+
+// * {
+// 	font-family: sans-serif;
+// }
+
+.underline {
+    text-decoration: underline;
+}
+
+#AppGalleryContainer {
+    height: 1210px;
+    background: #fff;
+}
+
+//AppGallery Scss
+
+// Uncomment this line and at the end for prod code, 
+// so css will be specific enough to have the correct rules come through
+//.node-type-page .content {
+    #GalleryHero {
+        height: 290px;
+        width: 100%;
+        margin-bottom: 34px;
+        position: relative;
+        background: url(#{$httpurl}AppGallery_Hero.jpg) no-repeat 0 0;
+        h1 {
+            color: #FFF;
+            padding-left: 50px;
+            padding-top: 74px;
+            margin: 0;
+            display: block;
+            @include super-font(53px, 1, sbold);
+        }
+        p {
+            @extend h1;
+            line-height: 30px;
+            padding-top: 0;
+            width: 490px;
+            @include super-font(21px, 1, light);
+        }
+    }
+    .btn {
+        position: absolute;
+        display: block;
+        &.icon {
+            top: 250px;
+            right: 46px;
+            height: 88px;
+            width: 304px;
+            color: #fff;
+            background: transparent url("#{$httpurl}btn-icon-bg.png") -2px -3px no-repeat;
+            text-align: left;
+            &:hover {
+                background-position: -2px -96px;
+            }
+            a {
+                text-decoration: none;
+                display: block;
+                margin-left: 60px;
+                margin-top: 15px;
+                color: white !important;
+                span {
+                    display: block;
+                    &.emphasis {
+                        margin-bottom: 3px;
+                        font-size: 21px;
+                    }
+                    &.underline {
+                        text-decoration: underline;
+                        display: inline-block;
+                    }
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .appList {
+        width: 901px;
+        height: 100%;
+        margin: 0 auto;
+        .title {
+            font-size: 25px;
+            margin-bottom: 20px;
+            font-family: "proxima_nova_sbold", Helvetica, Arial, sans-serif !important;
+        }
+        &.featured {
+            background: #dddddd;
+            @include border-radius(4px);
+            height: 225px;
+            padding: 0 14px;
+            position: relative;
+            padding-top: 12px;
+            margin-top: 57px;
+            margin-bottom: 35px;
+            .title {
+                background: #dddddd;
+                position: absolute;
+                @include border-radius(4px);
+                padding: 12px 0 0 15px;
+                margin: 0;
+                top: -37px;
+                left: 0px;
+                height: 38px;
+                width: 201px;
+            }
+        }
+    }
+    .app {
+        width: 167px;
+        height: 166px;
+        background: transparent url(#{$httpurl}app-bg.png) 0px 0px no-repeat;
+        padding: 18px 22px 41px 22px;
+        color: #FFF;
+        float: left;
+        position: relative;
+        text-decoration: none;
+        display: block;
+        margin-right: 19px;
+        margin-bottom: 7px;
+        @include super-font(14px, 1.5, reg);
+        &.embeded:after {
+            content: " ";
+            background-image: url(#{$httpurl}icon_embeded.png);
+            background-repeat: no-repeat;
+            height: 72px;
+            width: 72px;
+            display: block;
+            position: absolute;
+            top: 1px;
+            right: -1px;
+        }
+        &.last,
+        &:nth-of-type(4n+4) {
+            margin-right: 0;
+        }
+        img {
+            max-height: 53px;
+            margin: 0 auto;
+            display: block;
+        }
+        h3 {
+            margin-top: 27px;
+            margin-bottom: 2px;
+            color: #fff;
+            @include super-font(14px, 1.5, sbold);
+        }
+        p {
+            margin-top: 0px;
+            line-height: 17px;
+            margin-bottom: 7px;
+            color: #fff;
+            @include super-font(13px, 1, light);
+        }
+        &:active,
+        &:hover {
+            background-position: 0px -225px;
+            color: #fff;
+            text-decoration: none;
+        }
+        &.dev {
+            background: transparent url(#{$httpurl}app-cta.png) 0 0 no-repeat;
+        }
+    }
+
+//}
+
+//Overrides for the app gallery page
+@import "overrides";
+
+//App Detail Section
+@import "detail";

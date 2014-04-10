@@ -1,0 +1,11 @@
+@mixin vendor-prefix($name, $argument) {
+    -webkit-#{$name}: #{$argument};
+    -ms-#{$name}: #{$argument};
+    -moz-#{$name}: #{$argument};
+    -o-#{$name}: #{$argument};
+    #{$name}: #{$argument};
+}
+
+@mixin super-font($size, $height, $name) {
+    font: normal #{$size}/#{$height} "proxima_nova_#{$name}", Helvetica, Arial, sans-serif !important;
+}

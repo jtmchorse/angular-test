@@ -1,0 +1,25 @@
+// Light
+@font-face {
+    font-family: 'proxima_nova_light';
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.eot");
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_light-webfont_0.svg#proxima_novalight") format("svg");
+    font-style: normal;
+}
+
+
+//Normal/Regular
+@font-face {
+    font-family: 'proxima_nova_reg';
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.eot");
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_reg-webfont_0.svg#proxima_nova_rgregular") format("svg");
+    font-style: normal;
+}
+
+
+//Semi Bold
+@font-face {
+    font-family: 'proxima_nova_sbold';
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.eot");
+    src: url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.eot?#iefix") format("embedded-opentype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont.woff") format("woff"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont.ttf") format("truetype"), url("https://www.smartsheet.com/files/haymaker/proxima_nova_sbold-webfont_0.svg#proxima_novasemibold") format("svg");
+    font-style: normal;
+}
