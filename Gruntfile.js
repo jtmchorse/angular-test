@@ -45,13 +45,51 @@ module.exports = function(grunt) {
         prod: {
           options: {
             sassDir:'web/sass',
-            cssDir:'prod',
-            outputStyle: 'compact',
+            cssDir:'prod/css',
+            outputStyle: 'compressed',
             noLineComments : true
           }
         }
       },
       clean: ["prod"],
+
+      copy: {
+        // config : {
+        //   src:'web',
+        //   dest'prod',
+        // },
+        //CSS task is handled by sass
+        js : {
+          expand:true,
+          flatten: true,
+          src: 'web/js/**.*', 
+          dest: 'prod/js/',          
+          },
+        img : {
+          expand:true,
+          flatten: true,
+          src: 'web/img/**/**.*', 
+          dest: 'prod/img/',          
+          },
+        lib : {
+          expand:true,
+          flatten: true,
+          src: 'web/lib/*/*.min.*', 
+          dest: 'prod/lib/',          
+          },
+        markup : {
+          expand:true,
+          flatten: true,
+          src: 'web/index.html', 
+          dest: 'prod/',          
+          },   
+        partialsYO : {
+          expand:true,
+          flatten: true,
+          src: 'web/partials/*.**', 
+          dest: 'prod/partials/',          
+          },          
+      },
 
       open: {
       all: {
@@ -63,12 +101,13 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'express',
     'open',
-    'compass',
+    'compass:dist',
     'watch'
   ]);
     grunt.registerTask('build', [
     'clean',
     'compass:prod',
-    'watch'
+    'copy'
+    //'watch'
   ]);
 };

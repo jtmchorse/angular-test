@@ -5,7 +5,7 @@
 			</a>
 		</div>
 		<div id="LeftCol" >
-			<div class="tile embeded">
+			<div class="tile" ng-class="{'embeded': item.embeded}">
 				<img ng-src="img/logos/logo_{{item.shortname}}.png" alt="Logo for {{item.name}}">
 			</div>
 			<div class="well" >
@@ -48,23 +48,23 @@
 
 			<section id="About">
 				<h3>About</h3>
-				<p>Instantly see all of the files in your Drive account without leaving your sheet. Docs, spreadsheets, slides or images, they’re all easy to find and keep connected to the work you’re managing in Smartsheet.</p>
+				<p>{{item.about}}</p>
 			</section>
 
 			<section id="Features">
 				<h3>Features</h3>
 				<ul>
 					<li>
-						<span class="bold">It’s Seamless :</span>
-						<span class="copy">Sign in with your Google account info and you’ll instantly be collaborating on tasks, files and discussions.</span>
+						<span class="bold">{{item.feature1bold}}</span>
+						<span class="copy">{{item.feature1}}</span>
 					</li>
 					<li>
-						<span class="bold">Sign in with your Work In Context: </span>
-						<span class="copy">Get more done with a familiar-looking tool that keeps everything in context. Attach files and Google Docs to any task. Google account info and you’ll instantly be collaborating on tasks, files and discussions.</span>
+						<span class="bold">{{item.feature2bold}}</span>
+						<span class="copy">{{item.feature2}}</span>
 					</li>
 					<li>
-						<span class="bold">Connected: </span>
-						<span class="copy">Manage project information your way. Import Google Contacts to efficiently collaborate with teams, update Smartsheet project information directly from within Gmail, and sync your project calendar to your Google Calendar.</span>
+						<span class="bold">{{item.feature3bold}}</span>
+						<span class="copy">{{item.feature3}}</span>
 					</li>
 				</ul>
 
@@ -74,12 +74,12 @@
 				<h3>Get it</h3>
 				<ol>
 					<li>
-						<a href="#">Login to your account and open any sheet</a>
+						<a href="#">{{item.getitstep1}}</a>
 					</li>
-					<li>Click on the attachment column</li>
-					<li>Click on “Attach From”</li>
-					<li>Select “Google Drive”</li>
-					<li>Click “Grant Access” to continue.</li>
+					<li>{{item.getitstep2}}</li>
+					<li>{{item.getitstep3}}</li>
+					<li>{{item.getitstep4}}</li>
+					<li>{{item.getitstep5}}</li>
 				</ol>
 			</section>
 
